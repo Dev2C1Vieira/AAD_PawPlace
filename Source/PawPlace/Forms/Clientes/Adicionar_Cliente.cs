@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ADD_PawPlace
+namespace PawPlace.Forms.Clientes
 {
-    public partial class Form1 : Form
+    public partial class Adicionar_Cliente : Form
     {
-        public Form1()
+        public Adicionar_Cliente()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Fechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
