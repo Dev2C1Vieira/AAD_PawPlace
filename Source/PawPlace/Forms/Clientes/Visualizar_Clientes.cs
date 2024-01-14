@@ -87,15 +87,13 @@ namespace PawPlace.Forms.Clientes
 
         private void Visualizar_Clientes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pawPlaceDataSet.Cliente' table. You can move, or remove it, as needed.
-            this.clienteTableAdapter.Fill(this.pawPlaceDataSet.Cliente);
+            // TODO: This line of code loads data into the 'pawPlaceDataSet_Clientes.Cliente' table. You can move, or remove it, as needed.
+            this.clienteTableAdapter.Fill(this.pawPlaceDataSet_Clientes.Cliente);
 
         }
 
         private void Btn_Fechar_Click(object sender, EventArgs e)
         {
-            Forms.Entrada.Menu menu = new Forms.Entrada.Menu();
-            menu.Show();
             this.Hide();
         }
 

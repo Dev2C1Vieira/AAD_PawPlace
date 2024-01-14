@@ -31,16 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.Pnl_Esquerda = new System.Windows.Forms.Panel();
+            this.Pnl_Sub_Quartos = new System.Windows.Forms.Panel();
+            this.Btn_Add_Quartos = new System.Windows.Forms.Button();
+            this.Btn_Ver_Quartos = new System.Windows.Forms.Button();
+            this.Btn_Quartos = new System.Windows.Forms.Button();
+            this.Pnl_Sub_Animais = new System.Windows.Forms.Panel();
+            this.Btn_Add_Animais = new System.Windows.Forms.Button();
+            this.Btn_Ver_Animais = new System.Windows.Forms.Button();
+            this.Btn_Animais = new System.Windows.Forms.Button();
+            this.Pnl_Sub_Clientes = new System.Windows.Forms.Panel();
+            this.Btn_Add_Clientes = new System.Windows.Forms.Button();
+            this.Btn_Ver_Clientes = new System.Windows.Forms.Button();
+            this.Btn_Clientes = new System.Windows.Forms.Button();
             this.PnlNav = new System.Windows.Forms.Panel();
-            this.Btn_View_Quartos = new System.Windows.Forms.Button();
-            this.Btn_ViewAnimais = new System.Windows.Forms.Button();
-            this.Btn_ViewClientes = new System.Windows.Forms.Button();
             this.Btn_Home = new System.Windows.Forms.Button();
             this.Pict_Box_Logo = new System.Windows.Forms.PictureBox();
             this.Pnl_Superior = new System.Windows.Forms.Panel();
+            this.Pnl_Linha = new System.Windows.Forms.Panel();
             this.Lb_Data = new System.Windows.Forms.Label();
             this.Lb_Hora = new System.Windows.Forms.Label();
-            this.Lbl_Data = new System.Windows.Forms.Label();
             this.Pnl_Btn_Fechar = new System.Windows.Forms.Panel();
             this.Btn_Fechar = new System.Windows.Forms.PictureBox();
             this.Pnl_Btn_Min = new System.Windows.Forms.Panel();
@@ -51,6 +60,9 @@
             this.Pnl_Child_Form = new System.Windows.Forms.Panel();
             this.Relogio = new System.Windows.Forms.Timer(this.components);
             this.Pnl_Esquerda.SuspendLayout();
+            this.Pnl_Sub_Quartos.SuspendLayout();
+            this.Pnl_Sub_Animais.SuspendLayout();
+            this.Pnl_Sub_Clientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pict_Box_Logo)).BeginInit();
             this.Pnl_Superior.SuspendLayout();
             this.Pnl_Btn_Fechar.SuspendLayout();
@@ -65,17 +77,242 @@
             // Pnl_Esquerda
             // 
             this.Pnl_Esquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
-            this.Pnl_Esquerda.Controls.Add(this.Btn_View_Quartos);
+            this.Pnl_Esquerda.Controls.Add(this.Pnl_Sub_Quartos);
+            this.Pnl_Esquerda.Controls.Add(this.Btn_Quartos);
+            this.Pnl_Esquerda.Controls.Add(this.Pnl_Sub_Animais);
+            this.Pnl_Esquerda.Controls.Add(this.Btn_Animais);
+            this.Pnl_Esquerda.Controls.Add(this.Pnl_Sub_Clientes);
+            this.Pnl_Esquerda.Controls.Add(this.Btn_Clientes);
             this.Pnl_Esquerda.Controls.Add(this.PnlNav);
-            this.Pnl_Esquerda.Controls.Add(this.Btn_ViewAnimais);
-            this.Pnl_Esquerda.Controls.Add(this.Btn_ViewClientes);
             this.Pnl_Esquerda.Controls.Add(this.Btn_Home);
             this.Pnl_Esquerda.Controls.Add(this.Pict_Box_Logo);
             this.Pnl_Esquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.Pnl_Esquerda.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Esquerda.Name = "Pnl_Esquerda";
-            this.Pnl_Esquerda.Size = new System.Drawing.Size(657, 1740);
+            this.Pnl_Esquerda.Size = new System.Drawing.Size(657, 2000);
             this.Pnl_Esquerda.TabIndex = 10;
+            // 
+            // Pnl_Sub_Quartos
+            // 
+            this.Pnl_Sub_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Pnl_Sub_Quartos.Controls.Add(this.Btn_Add_Quartos);
+            this.Pnl_Sub_Quartos.Controls.Add(this.Btn_Ver_Quartos);
+            this.Pnl_Sub_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_Sub_Quartos.Location = new System.Drawing.Point(0, 1479);
+            this.Pnl_Sub_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Pnl_Sub_Quartos.Name = "Pnl_Sub_Quartos";
+            this.Pnl_Sub_Quartos.Size = new System.Drawing.Size(657, 238);
+            this.Pnl_Sub_Quartos.TabIndex = 11;
+            // 
+            // Btn_Add_Quartos
+            // 
+            this.Btn_Add_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Btn_Add_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Add_Quartos.FlatAppearance.BorderSize = 0;
+            this.Btn_Add_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Add_Quartos.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Add_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Add_Quartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Add_Quartos.Location = new System.Drawing.Point(0, 119);
+            this.Btn_Add_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Add_Quartos.Name = "Btn_Add_Quartos";
+            this.Btn_Add_Quartos.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
+            this.Btn_Add_Quartos.Size = new System.Drawing.Size(657, 119);
+            this.Btn_Add_Quartos.TabIndex = 5;
+            this.Btn_Add_Quartos.Text = "Adicionar Quartos";
+            this.Btn_Add_Quartos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Add_Quartos.UseVisualStyleBackColor = false;
+            this.Btn_Add_Quartos.Click += new System.EventHandler(this.Btn_Add_Quartos_Click);
+            // 
+            // Btn_Ver_Quartos
+            // 
+            this.Btn_Ver_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Btn_Ver_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Ver_Quartos.FlatAppearance.BorderSize = 0;
+            this.Btn_Ver_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ver_Quartos.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ver_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Ver_Quartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Ver_Quartos.Location = new System.Drawing.Point(0, 0);
+            this.Btn_Ver_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Ver_Quartos.Name = "Btn_Ver_Quartos";
+            this.Btn_Ver_Quartos.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
+            this.Btn_Ver_Quartos.Size = new System.Drawing.Size(657, 119);
+            this.Btn_Ver_Quartos.TabIndex = 4;
+            this.Btn_Ver_Quartos.Text = "Visualizar Quartos";
+            this.Btn_Ver_Quartos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Ver_Quartos.UseVisualStyleBackColor = false;
+            this.Btn_Ver_Quartos.Click += new System.EventHandler(this.Btn_Ver_Quartos_Click);
+            // 
+            // Btn_Quartos
+            // 
+            this.Btn_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
+            this.Btn_Quartos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Quartos.FlatAppearance.BorderSize = 0;
+            this.Btn_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Quartos.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Quartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Quartos.Location = new System.Drawing.Point(0, 1312);
+            this.Btn_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Quartos.Name = "Btn_Quartos";
+            this.Btn_Quartos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.Btn_Quartos.Size = new System.Drawing.Size(657, 167);
+            this.Btn_Quartos.TabIndex = 10;
+            this.Btn_Quartos.Text = "Quartos";
+            this.Btn_Quartos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Quartos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Quartos.UseVisualStyleBackColor = false;
+            this.Btn_Quartos.Click += new System.EventHandler(this.Btn_Quartos_Click);
+            // 
+            // Pnl_Sub_Animais
+            // 
+            this.Pnl_Sub_Animais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Pnl_Sub_Animais.Controls.Add(this.Btn_Add_Animais);
+            this.Pnl_Sub_Animais.Controls.Add(this.Btn_Ver_Animais);
+            this.Pnl_Sub_Animais.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_Sub_Animais.Location = new System.Drawing.Point(0, 1074);
+            this.Pnl_Sub_Animais.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Pnl_Sub_Animais.Name = "Pnl_Sub_Animais";
+            this.Pnl_Sub_Animais.Size = new System.Drawing.Size(657, 238);
+            this.Pnl_Sub_Animais.TabIndex = 9;
+            // 
+            // Btn_Add_Animais
+            // 
+            this.Btn_Add_Animais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Btn_Add_Animais.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Add_Animais.FlatAppearance.BorderSize = 0;
+            this.Btn_Add_Animais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Add_Animais.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Add_Animais.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Add_Animais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Add_Animais.Location = new System.Drawing.Point(0, 119);
+            this.Btn_Add_Animais.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Add_Animais.Name = "Btn_Add_Animais";
+            this.Btn_Add_Animais.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
+            this.Btn_Add_Animais.Size = new System.Drawing.Size(657, 119);
+            this.Btn_Add_Animais.TabIndex = 5;
+            this.Btn_Add_Animais.Text = "Adicionar Animais";
+            this.Btn_Add_Animais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Add_Animais.UseVisualStyleBackColor = false;
+            this.Btn_Add_Animais.Click += new System.EventHandler(this.Btn_Add_Animais_Click);
+            // 
+            // Btn_Ver_Animais
+            // 
+            this.Btn_Ver_Animais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Btn_Ver_Animais.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Ver_Animais.FlatAppearance.BorderSize = 0;
+            this.Btn_Ver_Animais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ver_Animais.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ver_Animais.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Ver_Animais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Ver_Animais.Location = new System.Drawing.Point(0, 0);
+            this.Btn_Ver_Animais.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Ver_Animais.Name = "Btn_Ver_Animais";
+            this.Btn_Ver_Animais.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
+            this.Btn_Ver_Animais.Size = new System.Drawing.Size(657, 119);
+            this.Btn_Ver_Animais.TabIndex = 4;
+            this.Btn_Ver_Animais.Text = "Visualizar Animais";
+            this.Btn_Ver_Animais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Ver_Animais.UseVisualStyleBackColor = false;
+            this.Btn_Ver_Animais.Click += new System.EventHandler(this.Btn_Ver_Animais_Click);
+            // 
+            // Btn_Animais
+            // 
+            this.Btn_Animais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
+            this.Btn_Animais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Animais.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Animais.FlatAppearance.BorderSize = 0;
+            this.Btn_Animais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Animais.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Animais.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Animais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Animais.Location = new System.Drawing.Point(0, 907);
+            this.Btn_Animais.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Animais.Name = "Btn_Animais";
+            this.Btn_Animais.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.Btn_Animais.Size = new System.Drawing.Size(657, 167);
+            this.Btn_Animais.TabIndex = 8;
+            this.Btn_Animais.Text = "Animais";
+            this.Btn_Animais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Animais.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Animais.UseVisualStyleBackColor = false;
+            this.Btn_Animais.Click += new System.EventHandler(this.Btn_Animais_Click);
+            // 
+            // Pnl_Sub_Clientes
+            // 
+            this.Pnl_Sub_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Pnl_Sub_Clientes.Controls.Add(this.Btn_Add_Clientes);
+            this.Pnl_Sub_Clientes.Controls.Add(this.Btn_Ver_Clientes);
+            this.Pnl_Sub_Clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Pnl_Sub_Clientes.Location = new System.Drawing.Point(0, 669);
+            this.Pnl_Sub_Clientes.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Pnl_Sub_Clientes.Name = "Pnl_Sub_Clientes";
+            this.Pnl_Sub_Clientes.Size = new System.Drawing.Size(657, 238);
+            this.Pnl_Sub_Clientes.TabIndex = 7;
+            // 
+            // Btn_Add_Clientes
+            // 
+            this.Btn_Add_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Btn_Add_Clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Add_Clientes.FlatAppearance.BorderSize = 0;
+            this.Btn_Add_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Add_Clientes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Add_Clientes.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Add_Clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Add_Clientes.Location = new System.Drawing.Point(0, 119);
+            this.Btn_Add_Clientes.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Add_Clientes.Name = "Btn_Add_Clientes";
+            this.Btn_Add_Clientes.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
+            this.Btn_Add_Clientes.Size = new System.Drawing.Size(657, 119);
+            this.Btn_Add_Clientes.TabIndex = 5;
+            this.Btn_Add_Clientes.Text = "Adicionar Clientes";
+            this.Btn_Add_Clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Add_Clientes.UseVisualStyleBackColor = false;
+            this.Btn_Add_Clientes.Click += new System.EventHandler(this.Btn_Add_Clientes_Click);
+            // 
+            // Btn_Ver_Clientes
+            // 
+            this.Btn_Ver_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Btn_Ver_Clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Ver_Clientes.FlatAppearance.BorderSize = 0;
+            this.Btn_Ver_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ver_Clientes.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ver_Clientes.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Ver_Clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Ver_Clientes.Location = new System.Drawing.Point(0, 0);
+            this.Btn_Ver_Clientes.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Ver_Clientes.Name = "Btn_Ver_Clientes";
+            this.Btn_Ver_Clientes.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
+            this.Btn_Ver_Clientes.Size = new System.Drawing.Size(657, 119);
+            this.Btn_Ver_Clientes.TabIndex = 4;
+            this.Btn_Ver_Clientes.Text = "Visualizar Clientes";
+            this.Btn_Ver_Clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Ver_Clientes.UseVisualStyleBackColor = false;
+            this.Btn_Ver_Clientes.Click += new System.EventHandler(this.Btn_Ver_Clientes_Click);
+            // 
+            // Btn_Clientes
+            // 
+            this.Btn_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
+            this.Btn_Clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_Clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_Clientes.FlatAppearance.BorderSize = 0;
+            this.Btn_Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Clientes.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Clientes.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Clientes.Location = new System.Drawing.Point(0, 502);
+            this.Btn_Clientes.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Clientes.Name = "Btn_Clientes";
+            this.Btn_Clientes.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.Btn_Clientes.Size = new System.Drawing.Size(657, 167);
+            this.Btn_Clientes.TabIndex = 6;
+            this.Btn_Clientes.Text = "Clientes";
+            this.Btn_Clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Clientes.UseVisualStyleBackColor = false;
+            this.Btn_Clientes.Click += new System.EventHandler(this.Btn_Clientes_Click);
             // 
             // PnlNav
             // 
@@ -83,65 +320,28 @@
             this.PnlNav.Location = new System.Drawing.Point(0, 335);
             this.PnlNav.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.PnlNav.Name = "PnlNav";
-            this.PnlNav.Size = new System.Drawing.Size(13, 177);
-            this.PnlNav.TabIndex = 3;
-            // 
-            // Btn_View_Quartos
-            // 
-            this.Btn_View_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_View_Quartos.FlatAppearance.BorderSize = 0;
-            this.Btn_View_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_View_Quartos.Font = new System.Drawing.Font("Verdana", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_View_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_View_Quartos.Location = new System.Drawing.Point(0, 866);
-            this.Btn_View_Quartos.Name = "Btn_View_Quartos";
-            this.Btn_View_Quartos.Size = new System.Drawing.Size(657, 177);
-            this.Btn_View_Quartos.TabIndex = 4;
-            this.Btn_View_Quartos.Text = "Visualizar Quartos";
-            this.Btn_View_Quartos.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ViewAnimais
-            // 
-            this.Btn_ViewAnimais.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_ViewAnimais.FlatAppearance.BorderSize = 0;
-            this.Btn_ViewAnimais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ViewAnimais.Font = new System.Drawing.Font("Verdana", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ViewAnimais.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_ViewAnimais.Location = new System.Drawing.Point(0, 689);
-            this.Btn_ViewAnimais.Name = "Btn_ViewAnimais";
-            this.Btn_ViewAnimais.Size = new System.Drawing.Size(657, 177);
-            this.Btn_ViewAnimais.TabIndex = 3;
-            this.Btn_ViewAnimais.Text = "Visualizar Quartos";
-            this.Btn_ViewAnimais.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ViewClientes
-            // 
-            this.Btn_ViewClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_ViewClientes.FlatAppearance.BorderSize = 0;
-            this.Btn_ViewClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ViewClientes.Font = new System.Drawing.Font("Verdana", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ViewClientes.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_ViewClientes.Location = new System.Drawing.Point(0, 512);
-            this.Btn_ViewClientes.Name = "Btn_ViewClientes";
-            this.Btn_ViewClientes.Size = new System.Drawing.Size(657, 177);
-            this.Btn_ViewClientes.TabIndex = 2;
-            this.Btn_ViewClientes.Text = "Visualizar Animais";
-            this.Btn_ViewClientes.UseVisualStyleBackColor = true;
-            this.Btn_ViewClientes.Click += new System.EventHandler(this.Btn_ViewClientes_Click);
+            this.PnlNav.Size = new System.Drawing.Size(13, 167);
+            this.PnlNav.TabIndex = 5;
             // 
             // Btn_Home
             // 
+            this.Btn_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
+            this.Btn_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Home.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_Home.FlatAppearance.BorderSize = 0;
             this.Btn_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Home.Font = new System.Drawing.Font("Verdana", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Home.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Home.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Home.Location = new System.Drawing.Point(0, 335);
+            this.Btn_Home.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Btn_Home.Name = "Btn_Home";
-            this.Btn_Home.Size = new System.Drawing.Size(657, 177);
-            this.Btn_Home.TabIndex = 1;
+            this.Btn_Home.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.Btn_Home.Size = new System.Drawing.Size(657, 167);
+            this.Btn_Home.TabIndex = 4;
             this.Btn_Home.Text = "Menu Principal";
-            this.Btn_Home.UseVisualStyleBackColor = true;
+            this.Btn_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Btn_Home.UseVisualStyleBackColor = false;
             this.Btn_Home.Click += new System.EventHandler(this.Btn_Home_Click);
             // 
             // Pict_Box_Logo
@@ -158,18 +358,29 @@
             // Pnl_Superior
             // 
             this.Pnl_Superior.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Pnl_Superior.Controls.Add(this.Pnl_Linha);
             this.Pnl_Superior.Controls.Add(this.Lb_Data);
             this.Pnl_Superior.Controls.Add(this.Lb_Hora);
-            this.Pnl_Superior.Controls.Add(this.Lbl_Data);
             this.Pnl_Superior.Controls.Add(this.Pnl_Btn_Fechar);
             this.Pnl_Superior.Controls.Add(this.Pnl_Btn_Min);
             this.Pnl_Superior.Controls.Add(this.Pnl_Btn_Max);
             this.Pnl_Superior.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Superior.Location = new System.Drawing.Point(657, 0);
             this.Pnl_Superior.Name = "Pnl_Superior";
-            this.Pnl_Superior.Size = new System.Drawing.Size(1832, 245);
+            this.Pnl_Superior.Size = new System.Drawing.Size(1843, 245);
             this.Pnl_Superior.TabIndex = 11;
             this.Pnl_Superior.DoubleClick += new System.EventHandler(this.Pnl_Superior_DoubleClick);
+            // 
+            // Pnl_Linha
+            // 
+            this.Pnl_Linha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pnl_Linha.BackColor = System.Drawing.Color.Black;
+            this.Pnl_Linha.Location = new System.Drawing.Point(0, 231);
+            this.Pnl_Linha.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Pnl_Linha.Name = "Pnl_Linha";
+            this.Pnl_Linha.Size = new System.Drawing.Size(2500, 7);
+            this.Pnl_Linha.TabIndex = 41;
             // 
             // Lb_Data
             // 
@@ -193,20 +404,11 @@
             this.Lb_Hora.Size = new System.Drawing.Size(0, 57);
             this.Lb_Hora.TabIndex = 14;
             // 
-            // Lbl_Data
-            // 
-            this.Lbl_Data.AutoSize = true;
-            this.Lbl_Data.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Data.Location = new System.Drawing.Point(41, 86);
-            this.Lbl_Data.Name = "Lbl_Data";
-            this.Lbl_Data.Size = new System.Drawing.Size(0, 48);
-            this.Lbl_Data.TabIndex = 13;
-            // 
             // Pnl_Btn_Fechar
             // 
             this.Pnl_Btn_Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pnl_Btn_Fechar.Controls.Add(this.Btn_Fechar);
-            this.Pnl_Btn_Fechar.Location = new System.Drawing.Point(1723, 16);
+            this.Pnl_Btn_Fechar.Location = new System.Drawing.Point(1734, 16);
             this.Pnl_Btn_Fechar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Pnl_Btn_Fechar.Name = "Pnl_Btn_Fechar";
             this.Pnl_Btn_Fechar.Size = new System.Drawing.Size(101, 74);
@@ -234,7 +436,7 @@
             // 
             this.Pnl_Btn_Min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pnl_Btn_Min.Controls.Add(this.Btn_Minimizar);
-            this.Pnl_Btn_Min.Location = new System.Drawing.Point(1521, 16);
+            this.Pnl_Btn_Min.Location = new System.Drawing.Point(1532, 16);
             this.Pnl_Btn_Min.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Pnl_Btn_Min.Name = "Pnl_Btn_Min";
             this.Pnl_Btn_Min.Size = new System.Drawing.Size(101, 74);
@@ -263,7 +465,7 @@
             this.Pnl_Btn_Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pnl_Btn_Max.Controls.Add(this.Btn_Maximizar);
             this.Pnl_Btn_Max.Controls.Add(this.Btn_Maximizado);
-            this.Pnl_Btn_Max.Location = new System.Drawing.Point(1622, 16);
+            this.Pnl_Btn_Max.Location = new System.Drawing.Point(1633, 16);
             this.Pnl_Btn_Max.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Pnl_Btn_Max.Name = "Pnl_Btn_Max";
             this.Pnl_Btn_Max.Size = new System.Drawing.Size(101, 74);
@@ -309,7 +511,7 @@
             this.Pnl_Child_Form.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Child_Form.Location = new System.Drawing.Point(657, 245);
             this.Pnl_Child_Form.Name = "Pnl_Child_Form";
-            this.Pnl_Child_Form.Size = new System.Drawing.Size(1832, 1495);
+            this.Pnl_Child_Form.Size = new System.Drawing.Size(1843, 1755);
             this.Pnl_Child_Form.TabIndex = 12;
             // 
             // Relogio
@@ -320,7 +522,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2489, 1740);
+            this.ClientSize = new System.Drawing.Size(2500, 2000);
             this.Controls.Add(this.Pnl_Child_Form);
             this.Controls.Add(this.Pnl_Superior);
             this.Controls.Add(this.Pnl_Esquerda);
@@ -331,6 +533,9 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.SizeChanged += new System.EventHandler(this.Menu_SizeChanged);
             this.Pnl_Esquerda.ResumeLayout(false);
+            this.Pnl_Sub_Quartos.ResumeLayout(false);
+            this.Pnl_Sub_Animais.ResumeLayout(false);
+            this.Pnl_Sub_Clientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pict_Box_Logo)).EndInit();
             this.Pnl_Superior.ResumeLayout(false);
             this.Pnl_Superior.PerformLayout();
@@ -348,9 +553,6 @@
         #endregion
 
         private System.Windows.Forms.Panel Pnl_Esquerda;
-        private System.Windows.Forms.Button Btn_ViewAnimais;
-        private System.Windows.Forms.Button Btn_ViewClientes;
-        private System.Windows.Forms.Button Btn_Home;
         private System.Windows.Forms.PictureBox Pict_Box_Logo;
         private System.Windows.Forms.Panel Pnl_Superior;
         private System.Windows.Forms.Panel Pnl_Btn_Fechar;
@@ -362,10 +564,22 @@
         private System.Windows.Forms.PictureBox Btn_Maximizado;
         private System.Windows.Forms.Panel Pnl_Child_Form;
         private System.Windows.Forms.Timer Relogio;
-        private System.Windows.Forms.Label Lbl_Data;
-        private System.Windows.Forms.Button Btn_View_Quartos;
-        private System.Windows.Forms.Panel PnlNav;
         private System.Windows.Forms.Label Lb_Data;
         private System.Windows.Forms.Label Lb_Hora;
+        private System.Windows.Forms.Panel Pnl_Linha;
+        private System.Windows.Forms.Panel Pnl_Sub_Clientes;
+        private System.Windows.Forms.Button Btn_Add_Clientes;
+        private System.Windows.Forms.Button Btn_Ver_Clientes;
+        private System.Windows.Forms.Button Btn_Clientes;
+        private System.Windows.Forms.Panel PnlNav;
+        private System.Windows.Forms.Button Btn_Home;
+        private System.Windows.Forms.Button Btn_Animais;
+        private System.Windows.Forms.Panel Pnl_Sub_Quartos;
+        private System.Windows.Forms.Button Btn_Add_Quartos;
+        private System.Windows.Forms.Button Btn_Ver_Quartos;
+        private System.Windows.Forms.Button Btn_Quartos;
+        private System.Windows.Forms.Panel Pnl_Sub_Animais;
+        private System.Windows.Forms.Button Btn_Add_Animais;
+        private System.Windows.Forms.Button Btn_Ver_Animais;
     }
 }

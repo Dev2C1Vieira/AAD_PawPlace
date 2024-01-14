@@ -20,9 +20,9 @@ namespace PawPlace {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PawPlaceDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PawPlaceDataSet_Clientes")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PawPlaceDataSet : global::System.Data.DataSet {
+    public partial class PawPlaceDataSet_Clientes : global::System.Data.DataSet {
         
         private ClienteDataTable tableCliente;
         
@@ -30,7 +30,7 @@ namespace PawPlace {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PawPlaceDataSet() {
+        public PawPlaceDataSet_Clientes() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PawPlace {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected PawPlaceDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PawPlaceDataSet_Clientes(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace PawPlace {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PawPlaceDataSet cln = ((PawPlaceDataSet)(base.Clone()));
+            PawPlaceDataSet_Clientes cln = ((PawPlaceDataSet_Clientes)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace PawPlace {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PawPlaceDataSet";
+            this.DataSetName = "PawPlaceDataSet_Clientes";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PawPlaceDataSet.xsd";
+            this.Namespace = "http://tempuri.org/PawPlaceDataSet_Clientes.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCliente = new ClienteDataTable();
@@ -225,7 +225,7 @@ namespace PawPlace {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PawPlaceDataSet ds = new PawPlaceDataSet();
+            PawPlaceDataSet_Clientes ds = new PawPlaceDataSet_Clientes();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -530,7 +530,7 @@ namespace PawPlace {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PawPlaceDataSet ds = new PawPlaceDataSet();
+                PawPlaceDataSet_Clientes ds = new PawPlaceDataSet_Clientes();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -745,7 +745,7 @@ namespace PawPlace {
         }
     }
 }
-namespace PawPlace.PawPlaceDataSetTableAdapters {
+namespace PawPlace.PawPlaceDataSet_ClientesTableAdapters {
     
     
     /// <summary>
@@ -938,7 +938,7 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PawPlaceDataSet.ClienteDataTable dataTable) {
+        public virtual int Fill(PawPlaceDataSet_Clientes.ClienteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -951,9 +951,9 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PawPlaceDataSet.ClienteDataTable GetData() {
+        public virtual PawPlaceDataSet_Clientes.ClienteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PawPlaceDataSet.ClienteDataTable dataTable = new PawPlaceDataSet.ClienteDataTable();
+            PawPlaceDataSet_Clientes.ClienteDataTable dataTable = new PawPlaceDataSet_Clientes.ClienteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -961,14 +961,14 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PawPlaceDataSet.ClienteDataTable dataTable) {
+        public virtual int Update(PawPlaceDataSet_Clientes.ClienteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PawPlaceDataSet dataSet) {
+        public virtual int Update(PawPlaceDataSet_Clientes dataSet) {
             return this.Adapter.Update(dataSet, "Cliente");
         }
         
@@ -1262,7 +1262,7 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(PawPlaceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PawPlaceDataSet_Clientes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clienteTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1281,7 +1281,7 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(PawPlaceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PawPlaceDataSet_Clientes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clienteTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1299,7 +1299,7 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(PawPlaceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PawPlaceDataSet_Clientes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._clienteTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1341,7 +1341,7 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(PawPlaceDataSet dataSet) {
+        public virtual int UpdateAll(PawPlaceDataSet_Clientes dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

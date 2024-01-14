@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="PawPlaceDataSet" targetNamespace="http://tempuri.org/PawPlaceDataSet.xsd" xmlns:mstns="http://tempuri.org/PawPlaceDataSet.xsd" xmlns="http://tempuri.org/PawPlaceDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="PawPlaceDataSet_Clientes" targetNamespace="http://tempuri.org/PawPlaceDataSet_Clientes.xsd" xmlns:mstns="http://tempuri.org/PawPlaceDataSet_Clientes.xsd" xmlns="http://tempuri.org/PawPlaceDataSet_Clientes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -81,7 +81,7 @@ SELECT ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal FROM Cliente WHERE (I
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="PawPlaceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="PawPlaceDataSet" msprop:Generator_DataSetName="PawPlaceDataSet">
+  <xs:element name="PawPlaceDataSet_Clientes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="PawPlaceDataSet_Clientes" msprop:Generator_DataSetName="PawPlaceDataSet_Clientes">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Cliente" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_TableVarName="tableCliente" msprop:Generator_UserTableName="Cliente">

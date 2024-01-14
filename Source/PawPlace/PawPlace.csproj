@@ -129,10 +129,22 @@
     <Compile Include="Forms\Entrada\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PawPlaceDataSet.Designer.cs">
+    <Compile Include="Forms\Quartos\Adicionar_Quartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Quartos\Adicionar_Quartos.Designer.cs">
+      <DependentUpon>Adicionar_Quartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Quartos\Visualizar_Quartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Quartos\Visualizar_Quartos.Designer.cs">
+      <DependentUpon>Visualizar_Quartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PawPlaceDataSet_Clientes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PawPlaceDataSet.xsd</DependentUpon>
+      <DependentUpon>PawPlaceDataSet_Clientes.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,16 +168,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <None Include="PawPlaceDataSet.xsc">
-      <DependentUpon>PawPlaceDataSet.xsd</DependentUpon>
+    <None Include="PawPlaceDataSet_Clientes.xsc">
+      <DependentUpon>PawPlaceDataSet_Clientes.xsd</DependentUpon>
     </None>
-    <None Include="PawPlaceDataSet.xsd">
+    <None Include="PawPlaceDataSet_Clientes.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PawPlaceDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>PawPlaceDataSet_Clientes.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PawPlaceDataSet.xss">
-      <DependentUpon>PawPlaceDataSet.xsd</DependentUpon>
+    <None Include="PawPlaceDataSet_Clientes.xss">
+      <DependentUpon>PawPlaceDataSet_Clientes.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
