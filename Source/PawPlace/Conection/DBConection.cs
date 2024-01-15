@@ -1,12 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-
-namespace PawPlace.Conection
+﻿namespace PawPlace.Conection
 {
     public class DBConection
     {
-        public static MySqlConnection ObterConexao()
+        public static string ObterMySQLConection()
         {
-            return new MySqlConnection("Data Source=PC_PHCVIEIRA;Initial Catalog=PawPlace;Integrated Security=True;Encrypt=False");
+            return "Data Source=PC_PHCVIEIRA;Initial Catalog=PawPlace;Integrated Security=True;";
         }
     }
 }
