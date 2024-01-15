@@ -117,6 +117,12 @@
     <Compile Include="Forms\Clientes\Adicionar_Cliente.Designer.cs">
       <DependentUpon>Adicionar_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Clientes\Alterar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes\Alterar_Cliente.Designer.cs">
+      <DependentUpon>Alterar_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Clientes\Visualizar_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Clientes\Adicionar_Cliente.resx">
       <DependentUpon>Adicionar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes\Alterar_Cliente.resx">
+      <DependentUpon>Alterar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\Visualizar_Clientes.resx">
       <DependentUpon>Visualizar_Clientes.cs</DependentUpon>

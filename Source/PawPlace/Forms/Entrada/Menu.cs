@@ -222,6 +222,13 @@ namespace PawPlace.Forms.Entrada
             Pnl_Btn_Fechar.BackColor = Color.Transparent;
         }
 
+        private void Pnl_Superior_MouseDown(object sender, MouseEventArgs e)
+        {
+            //Código para permitir mover o formulário 
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
         #endregion
 
         #region Menu_SizeChanged_Methods

@@ -89,7 +89,6 @@ namespace PawPlace.Forms.Clientes
         {
             // TODO: This line of code loads data into the 'pawPlaceDataSet_Clientes.Cliente' table. You can move, or remove it, as needed.
             this.clienteTableAdapter.Fill(this.pawPlaceDataSet_Clientes.Cliente);
-
         }
 
         private void Btn_Fechar_Click(object sender, EventArgs e)
@@ -101,6 +100,27 @@ namespace PawPlace.Forms.Clientes
         {
             Forms.Clientes.Adicionar_Cliente adicionar_Cliente = new Forms.Clientes.Adicionar_Cliente();
             adicionar_Cliente.Show();
+        }
+
+        private void Btn_Alterar_Click(object sender, EventArgs e)
+        {
+            //Este código recolhe as informações presentes na datagridview e guardas em variáveis, que depois são por sua vez guardadas
+            //nas respetivas caixas de texto, no formulário de alterar os dados.
+            try
+            {
+                int ID_ClienteAlterar = (int)Tabela_Dados.CurrentRow.Cells[0].Value;
+                Clientes.Alterar_Cliente alterar_cliente = new Clientes.Alterar_Cliente();
+                alterar_cliente.id = ID_ClienteAlterar;
+                if (alterar_cliente.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show("Dados do Cliente Alterados!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //ReporTabelaDados(Txt_Pesquisar.Text, Qnt_Entrys.Text);
+                }
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.ToString());
+            }
         }
     }
 }

@@ -370,6 +370,7 @@
             this.Pnl_Superior.Size = new System.Drawing.Size(1843, 245);
             this.Pnl_Superior.TabIndex = 11;
             this.Pnl_Superior.DoubleClick += new System.EventHandler(this.Pnl_Superior_DoubleClick);
+            this.Pnl_Superior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Superior_MouseDown);
             // 
             // Pnl_Linha
             // 
