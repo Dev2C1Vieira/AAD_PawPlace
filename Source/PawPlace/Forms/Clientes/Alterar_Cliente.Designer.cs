@@ -29,22 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alterar_Cliente));
-            this.Lb_Cod_Postal = new System.Windows.Forms.Label();
+            this.Lb_NIF = new System.Windows.Forms.Label();
             this.Lb_Localidade = new System.Windows.Forms.Label();
-            this.Lb_Morada = new System.Windows.Forms.Label();
-            this.Txt_Localidade = new System.Windows.Forms.TextBox();
-            this.Txt_Morada = new System.Windows.Forms.TextBox();
-            this.Lb_Telefone = new System.Windows.Forms.Label();
+            this.Lb_DataNascimento = new System.Windows.Forms.Label();
+            this.Txt_CodPostal = new System.Windows.Forms.TextBox();
             this.Lb_NomeCompleto = new System.Windows.Forms.Label();
-            this.Lb_Email = new System.Windows.Forms.Label();
             this.Txt_NomeCliente = new System.Windows.Forms.TextBox();
-            this.Txt_Email = new System.Windows.Forms.TextBox();
             this.Txt_ID = new System.Windows.Forms.TextBox();
-            this.Lb_Contribuinte = new System.Windows.Forms.Label();
             this.Lb_ID = new System.Windows.Forms.Label();
-            this.Txt_Contribuinte = new System.Windows.Forms.TextBox();
-            this.Mskd_Cod_Postal = new System.Windows.Forms.MaskedTextBox();
-            this.Mskd_Telefone = new System.Windows.Forms.MaskedTextBox();
             this.Btn_Alterar = new System.Windows.Forms.Button();
             this.Btn_Permitir_Alterar = new System.Windows.Forms.PictureBox();
             this.Pnl_LineRight = new System.Windows.Forms.Panel();
@@ -56,25 +48,28 @@
             this.Lb_Titulo = new System.Windows.Forms.Label();
             this.Pnl_LineUp = new System.Windows.Forms.Panel();
             this.Pnl_Superior = new System.Windows.Forms.Panel();
+            this.Txt_NIF = new System.Windows.Forms.TextBox();
+            this.DTP_DataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.Txt_DataNascimento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Permitir_Alterar)).BeginInit();
             this.Pnl_Btn_Fechar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar)).BeginInit();
             this.Pnl_Superior.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Lb_Cod_Postal
+            // Lb_NIF
             // 
-            this.Lb_Cod_Postal.AutoSize = true;
-            this.Lb_Cod_Postal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Lb_Cod_Postal.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Cod_Postal.ForeColor = System.Drawing.Color.Black;
-            this.Lb_Cod_Postal.Location = new System.Drawing.Point(103, 541);
-            this.Lb_Cod_Postal.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.Lb_Cod_Postal.Name = "Lb_Cod_Postal";
-            this.Lb_Cod_Postal.Size = new System.Drawing.Size(263, 41);
-            this.Lb_Cod_Postal.TabIndex = 79;
-            this.Lb_Cod_Postal.Text = "Código Postal:";
-            this.Lb_Cod_Postal.UseWaitCursor = true;
+            this.Lb_NIF.AutoSize = true;
+            this.Lb_NIF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Lb_NIF.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_NIF.ForeColor = System.Drawing.Color.Black;
+            this.Lb_NIF.Location = new System.Drawing.Point(103, 541);
+            this.Lb_NIF.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.Lb_NIF.Name = "Lb_NIF";
+            this.Lb_NIF.Size = new System.Drawing.Size(92, 41);
+            this.Lb_NIF.TabIndex = 79;
+            this.Lb_NIF.Text = "NIF:";
+            this.Lb_NIF.UseWaitCursor = true;
             // 
             // Lb_Localidade
             // 
@@ -85,66 +80,38 @@
             this.Lb_Localidade.Location = new System.Drawing.Point(103, 639);
             this.Lb_Localidade.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.Lb_Localidade.Name = "Lb_Localidade";
-            this.Lb_Localidade.Size = new System.Drawing.Size(211, 41);
+            this.Lb_Localidade.Size = new System.Drawing.Size(263, 41);
             this.Lb_Localidade.TabIndex = 80;
-            this.Lb_Localidade.Text = "Localidade:";
+            this.Lb_Localidade.Text = "Código Postal:";
             this.Lb_Localidade.UseWaitCursor = true;
             // 
-            // Lb_Morada
+            // Lb_DataNascimento
             // 
-            this.Lb_Morada.AutoSize = true;
-            this.Lb_Morada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Lb_Morada.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Morada.ForeColor = System.Drawing.Color.Black;
-            this.Lb_Morada.Location = new System.Drawing.Point(106, 439);
-            this.Lb_Morada.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.Lb_Morada.Name = "Lb_Morada";
-            this.Lb_Morada.Size = new System.Drawing.Size(158, 41);
-            this.Lb_Morada.TabIndex = 78;
-            this.Lb_Morada.Text = "Morada:";
-            this.Lb_Morada.UseWaitCursor = true;
+            this.Lb_DataNascimento.AutoSize = true;
+            this.Lb_DataNascimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Lb_DataNascimento.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lb_DataNascimento.ForeColor = System.Drawing.Color.Black;
+            this.Lb_DataNascimento.Location = new System.Drawing.Point(106, 439);
+            this.Lb_DataNascimento.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.Lb_DataNascimento.Name = "Lb_DataNascimento";
+            this.Lb_DataNascimento.Size = new System.Drawing.Size(376, 41);
+            this.Lb_DataNascimento.TabIndex = 78;
+            this.Lb_DataNascimento.Text = "Data de Nascimento:";
+            this.Lb_DataNascimento.UseWaitCursor = true;
             // 
-            // Txt_Localidade
+            // Txt_CodPostal
             // 
-            this.Txt_Localidade.BackColor = System.Drawing.Color.White;
-            this.Txt_Localidade.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Localidade.ForeColor = System.Drawing.Color.Black;
-            this.Txt_Localidade.Location = new System.Drawing.Point(647, 637);
-            this.Txt_Localidade.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Txt_Localidade.Multiline = true;
-            this.Txt_Localidade.Name = "Txt_Localidade";
-            this.Txt_Localidade.ReadOnly = true;
-            this.Txt_Localidade.Size = new System.Drawing.Size(857, 47);
-            this.Txt_Localidade.TabIndex = 71;
-            this.Txt_Localidade.UseWaitCursor = true;
-            // 
-            // Txt_Morada
-            // 
-            this.Txt_Morada.BackColor = System.Drawing.Color.White;
-            this.Txt_Morada.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Morada.ForeColor = System.Drawing.Color.Black;
-            this.Txt_Morada.Location = new System.Drawing.Point(647, 436);
-            this.Txt_Morada.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Txt_Morada.Multiline = true;
-            this.Txt_Morada.Name = "Txt_Morada";
-            this.Txt_Morada.ReadOnly = true;
-            this.Txt_Morada.Size = new System.Drawing.Size(857, 47);
-            this.Txt_Morada.TabIndex = 69;
-            this.Txt_Morada.UseWaitCursor = true;
-            // 
-            // Lb_Telefone
-            // 
-            this.Lb_Telefone.AutoSize = true;
-            this.Lb_Telefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Lb_Telefone.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Telefone.ForeColor = System.Drawing.Color.Black;
-            this.Lb_Telefone.Location = new System.Drawing.Point(103, 737);
-            this.Lb_Telefone.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.Lb_Telefone.Name = "Lb_Telefone";
-            this.Lb_Telefone.Size = new System.Drawing.Size(174, 41);
-            this.Lb_Telefone.TabIndex = 81;
-            this.Lb_Telefone.Text = "Telefone:";
-            this.Lb_Telefone.UseWaitCursor = true;
+            this.Txt_CodPostal.BackColor = System.Drawing.Color.White;
+            this.Txt_CodPostal.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_CodPostal.ForeColor = System.Drawing.Color.Black;
+            this.Txt_CodPostal.Location = new System.Drawing.Point(647, 637);
+            this.Txt_CodPostal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Txt_CodPostal.Multiline = true;
+            this.Txt_CodPostal.Name = "Txt_CodPostal";
+            this.Txt_CodPostal.ReadOnly = true;
+            this.Txt_CodPostal.Size = new System.Drawing.Size(857, 47);
+            this.Txt_CodPostal.TabIndex = 71;
+            this.Txt_CodPostal.UseWaitCursor = true;
             // 
             // Lb_NomeCompleto
             // 
@@ -160,20 +127,6 @@
             this.Lb_NomeCompleto.Text = "Nome Completo:";
             this.Lb_NomeCompleto.UseWaitCursor = true;
             // 
-            // Lb_Email
-            // 
-            this.Lb_Email.AutoSize = true;
-            this.Lb_Email.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Lb_Email.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Email.ForeColor = System.Drawing.Color.Black;
-            this.Lb_Email.Location = new System.Drawing.Point(109, 835);
-            this.Lb_Email.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.Lb_Email.Name = "Lb_Email";
-            this.Lb_Email.Size = new System.Drawing.Size(126, 41);
-            this.Lb_Email.TabIndex = 82;
-            this.Lb_Email.Text = "Email:";
-            this.Lb_Email.UseWaitCursor = true;
-            // 
             // Txt_NomeCliente
             // 
             this.Txt_NomeCliente.BackColor = System.Drawing.Color.White;
@@ -187,20 +140,6 @@
             this.Txt_NomeCliente.Size = new System.Drawing.Size(857, 47);
             this.Txt_NomeCliente.TabIndex = 68;
             this.Txt_NomeCliente.UseWaitCursor = true;
-            // 
-            // Txt_Email
-            // 
-            this.Txt_Email.BackColor = System.Drawing.Color.White;
-            this.Txt_Email.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Email.ForeColor = System.Drawing.Color.Black;
-            this.Txt_Email.Location = new System.Drawing.Point(647, 832);
-            this.Txt_Email.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Txt_Email.Multiline = true;
-            this.Txt_Email.Name = "Txt_Email";
-            this.Txt_Email.ReadOnly = true;
-            this.Txt_Email.Size = new System.Drawing.Size(857, 47);
-            this.Txt_Email.TabIndex = 73;
-            this.Txt_Email.UseWaitCursor = true;
             // 
             // Txt_ID
             // 
@@ -216,20 +155,6 @@
             this.Txt_ID.TabIndex = 67;
             this.Txt_ID.UseWaitCursor = true;
             // 
-            // Lb_Contribuinte
-            // 
-            this.Lb_Contribuinte.AutoSize = true;
-            this.Lb_Contribuinte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Lb_Contribuinte.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lb_Contribuinte.ForeColor = System.Drawing.Color.Black;
-            this.Lb_Contribuinte.Location = new System.Drawing.Point(106, 942);
-            this.Lb_Contribuinte.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.Lb_Contribuinte.Name = "Lb_Contribuinte";
-            this.Lb_Contribuinte.Size = new System.Drawing.Size(244, 41);
-            this.Lb_Contribuinte.TabIndex = 83;
-            this.Lb_Contribuinte.Text = "Contribuinte:";
-            this.Lb_Contribuinte.UseWaitCursor = true;
-            // 
             // Lb_ID
             // 
             this.Lb_ID.AutoSize = true;
@@ -244,56 +169,15 @@
             this.Lb_ID.Text = "Código do Cliente: ";
             this.Lb_ID.UseWaitCursor = true;
             // 
-            // Txt_Contribuinte
-            // 
-            this.Txt_Contribuinte.BackColor = System.Drawing.Color.White;
-            this.Txt_Contribuinte.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Contribuinte.ForeColor = System.Drawing.Color.Black;
-            this.Txt_Contribuinte.Location = new System.Drawing.Point(647, 930);
-            this.Txt_Contribuinte.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Txt_Contribuinte.Multiline = true;
-            this.Txt_Contribuinte.Name = "Txt_Contribuinte";
-            this.Txt_Contribuinte.ReadOnly = true;
-            this.Txt_Contribuinte.Size = new System.Drawing.Size(857, 47);
-            this.Txt_Contribuinte.TabIndex = 74;
-            this.Txt_Contribuinte.UseWaitCursor = true;
-            // 
-            // Mskd_Cod_Postal
-            // 
-            this.Mskd_Cod_Postal.BackColor = System.Drawing.Color.White;
-            this.Mskd_Cod_Postal.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mskd_Cod_Postal.ForeColor = System.Drawing.Color.Black;
-            this.Mskd_Cod_Postal.Location = new System.Drawing.Point(647, 541);
-            this.Mskd_Cod_Postal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Mskd_Cod_Postal.Mask = "#### - ###";
-            this.Mskd_Cod_Postal.Name = "Mskd_Cod_Postal";
-            this.Mskd_Cod_Postal.ReadOnly = true;
-            this.Mskd_Cod_Postal.Size = new System.Drawing.Size(857, 48);
-            this.Mskd_Cod_Postal.TabIndex = 70;
-            this.Mskd_Cod_Postal.UseWaitCursor = true;
-            // 
-            // Mskd_Telefone
-            // 
-            this.Mskd_Telefone.BackColor = System.Drawing.Color.White;
-            this.Mskd_Telefone.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mskd_Telefone.ForeColor = System.Drawing.Color.Black;
-            this.Mskd_Telefone.Location = new System.Drawing.Point(647, 737);
-            this.Mskd_Telefone.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Mskd_Telefone.Mask = "### - ### - ###";
-            this.Mskd_Telefone.Name = "Mskd_Telefone";
-            this.Mskd_Telefone.ReadOnly = true;
-            this.Mskd_Telefone.Size = new System.Drawing.Size(857, 48);
-            this.Mskd_Telefone.TabIndex = 72;
-            this.Mskd_Telefone.UseWaitCursor = true;
-            // 
             // Btn_Alterar
             // 
+            this.Btn_Alterar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_Alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
             this.Btn_Alterar.FlatAppearance.BorderSize = 0;
             this.Btn_Alterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Alterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Alterar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Alterar.Location = new System.Drawing.Point(992, 1030);
+            this.Btn_Alterar.Location = new System.Drawing.Point(992, 800);
             this.Btn_Alterar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Btn_Alterar.Name = "Btn_Alterar";
             this.Btn_Alterar.Size = new System.Drawing.Size(512, 105);
@@ -302,6 +186,7 @@
             this.Btn_Alterar.UseVisualStyleBackColor = false;
             this.Btn_Alterar.UseWaitCursor = true;
             this.Btn_Alterar.Visible = false;
+            this.Btn_Alterar.Click += new System.EventHandler(this.Btn_Alterar_Click);
             // 
             // Btn_Permitir_Alterar
             // 
@@ -323,7 +208,7 @@
             this.Pnl_LineRight.Location = new System.Drawing.Point(1810, 0);
             this.Pnl_LineRight.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Pnl_LineRight.Name = "Pnl_LineRight";
-            this.Pnl_LineRight.Size = new System.Drawing.Size(3, 1312);
+            this.Pnl_LineRight.Size = new System.Drawing.Size(3, 1000);
             this.Pnl_LineRight.TabIndex = 86;
             // 
             // Pnl_LineLeft
@@ -333,14 +218,14 @@
             this.Pnl_LineLeft.Location = new System.Drawing.Point(0, 0);
             this.Pnl_LineLeft.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Pnl_LineLeft.Name = "Pnl_LineLeft";
-            this.Pnl_LineLeft.Size = new System.Drawing.Size(3, 1312);
+            this.Pnl_LineLeft.Size = new System.Drawing.Size(3, 1000);
             this.Pnl_LineLeft.TabIndex = 87;
             // 
             // Pnl_LineDown
             // 
             this.Pnl_LineDown.BackColor = System.Drawing.Color.Black;
             this.Pnl_LineDown.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Pnl_LineDown.Location = new System.Drawing.Point(3, 1310);
+            this.Pnl_LineDown.Location = new System.Drawing.Point(3, 998);
             this.Pnl_LineDown.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Pnl_LineDown.Name = "Pnl_LineDown";
             this.Pnl_LineDown.Size = new System.Drawing.Size(1807, 2);
@@ -356,6 +241,7 @@
             this.Pnl_Btn_Fechar.Size = new System.Drawing.Size(101, 74);
             this.Pnl_Btn_Fechar.TabIndex = 57;
             this.Pnl_Btn_Fechar.UseWaitCursor = true;
+            this.Pnl_Btn_Fechar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Btn_Fechar_MouseDown);
             // 
             // Btn_Fechar
             // 
@@ -371,6 +257,7 @@
             this.Btn_Fechar.TabStop = false;
             this.Btn_Fechar.UseWaitCursor = true;
             this.Btn_Fechar.Click += new System.EventHandler(this.Btn_Fechar_Click);
+            this.Btn_Fechar.MouseHover += new System.EventHandler(this.Btn_Fechar_MouseHover);
             // 
             // Pnl_Line
             // 
@@ -418,11 +305,49 @@
             this.Pnl_Superior.UseWaitCursor = true;
             this.Pnl_Superior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnl_Superior_MouseDown);
             // 
+            // Txt_NIF
+            // 
+            this.Txt_NIF.BackColor = System.Drawing.Color.White;
+            this.Txt_NIF.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_NIF.ForeColor = System.Drawing.Color.Black;
+            this.Txt_NIF.Location = new System.Drawing.Point(647, 541);
+            this.Txt_NIF.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Txt_NIF.Multiline = true;
+            this.Txt_NIF.Name = "Txt_NIF";
+            this.Txt_NIF.ReadOnly = true;
+            this.Txt_NIF.Size = new System.Drawing.Size(857, 47);
+            this.Txt_NIF.TabIndex = 90;
+            this.Txt_NIF.UseWaitCursor = true;
+            // 
+            // DTP_DataNascimento
+            // 
+            this.DTP_DataNascimento.Location = new System.Drawing.Point(647, 442);
+            this.DTP_DataNascimento.Name = "DTP_DataNascimento";
+            this.DTP_DataNascimento.Size = new System.Drawing.Size(857, 38);
+            this.DTP_DataNascimento.TabIndex = 91;
+            this.DTP_DataNascimento.Visible = false;
+            // 
+            // Txt_DataNascimento
+            // 
+            this.Txt_DataNascimento.BackColor = System.Drawing.Color.White;
+            this.Txt_DataNascimento.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_DataNascimento.ForeColor = System.Drawing.Color.Black;
+            this.Txt_DataNascimento.Location = new System.Drawing.Point(647, 439);
+            this.Txt_DataNascimento.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Txt_DataNascimento.Multiline = true;
+            this.Txt_DataNascimento.Name = "Txt_DataNascimento";
+            this.Txt_DataNascimento.ReadOnly = true;
+            this.Txt_DataNascimento.Size = new System.Drawing.Size(857, 47);
+            this.Txt_DataNascimento.TabIndex = 92;
+            this.Txt_DataNascimento.UseWaitCursor = true;
+            // 
             // Alterar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1813, 1312);
+            this.ClientSize = new System.Drawing.Size(1813, 1000);
+            this.Controls.Add(this.DTP_DataNascimento);
+            this.Controls.Add(this.Txt_NIF);
             this.Controls.Add(this.Pnl_LineUp);
             this.Controls.Add(this.Pnl_LineDown);
             this.Controls.Add(this.Pnl_LineLeft);
@@ -430,22 +355,15 @@
             this.Controls.Add(this.Btn_Permitir_Alterar);
             this.Controls.Add(this.Lb_ID);
             this.Controls.Add(this.Btn_Alterar);
-            this.Controls.Add(this.Lb_Cod_Postal);
-            this.Controls.Add(this.Mskd_Telefone);
+            this.Controls.Add(this.Lb_NIF);
             this.Controls.Add(this.Lb_Localidade);
-            this.Controls.Add(this.Mskd_Cod_Postal);
-            this.Controls.Add(this.Lb_Morada);
-            this.Controls.Add(this.Txt_Contribuinte);
-            this.Controls.Add(this.Txt_Localidade);
-            this.Controls.Add(this.Txt_Morada);
-            this.Controls.Add(this.Lb_Contribuinte);
-            this.Controls.Add(this.Lb_Telefone);
+            this.Controls.Add(this.Lb_DataNascimento);
+            this.Controls.Add(this.Txt_CodPostal);
             this.Controls.Add(this.Txt_ID);
             this.Controls.Add(this.Lb_NomeCompleto);
-            this.Controls.Add(this.Txt_Email);
-            this.Controls.Add(this.Lb_Email);
             this.Controls.Add(this.Txt_NomeCliente);
             this.Controls.Add(this.Pnl_Superior);
+            this.Controls.Add(this.Txt_DataNascimento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Alterar_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -463,22 +381,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Lb_Cod_Postal;
+        private System.Windows.Forms.Label Lb_NIF;
         private System.Windows.Forms.Label Lb_Localidade;
-        private System.Windows.Forms.Label Lb_Morada;
-        public System.Windows.Forms.TextBox Txt_Localidade;
-        public System.Windows.Forms.TextBox Txt_Morada;
-        private System.Windows.Forms.Label Lb_Telefone;
+        private System.Windows.Forms.Label Lb_DataNascimento;
+        public System.Windows.Forms.TextBox Txt_CodPostal;
         private System.Windows.Forms.Label Lb_NomeCompleto;
-        private System.Windows.Forms.Label Lb_Email;
         public System.Windows.Forms.TextBox Txt_NomeCliente;
-        public System.Windows.Forms.TextBox Txt_Email;
         public System.Windows.Forms.TextBox Txt_ID;
-        private System.Windows.Forms.Label Lb_Contribuinte;
         private System.Windows.Forms.Label Lb_ID;
-        public System.Windows.Forms.TextBox Txt_Contribuinte;
-        public System.Windows.Forms.MaskedTextBox Mskd_Cod_Postal;
-        public System.Windows.Forms.MaskedTextBox Mskd_Telefone;
         private System.Windows.Forms.Button Btn_Alterar;
         private System.Windows.Forms.PictureBox Btn_Permitir_Alterar;
         private System.Windows.Forms.Panel Pnl_LineRight;
@@ -490,5 +400,8 @@
         private System.Windows.Forms.Label Lb_Titulo;
         private System.Windows.Forms.Panel Pnl_LineUp;
         private System.Windows.Forms.Panel Pnl_Superior;
+        public System.Windows.Forms.TextBox Txt_NIF;
+        private System.Windows.Forms.DateTimePicker DTP_DataNascimento;
+        public System.Windows.Forms.TextBox Txt_DataNascimento;
     }
 }

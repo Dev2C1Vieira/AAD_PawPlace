@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -13,11 +14,6 @@ namespace PawPlace.Forms.Clientes
 
         DataSet ds = new DataSet();
         SqlDataAdapter DataAdapter = new SqlDataAdapter();
-
-        int inicio = 0;
-        int pagAtual = 1;
-        int tamanhoPagina = 0;
-        int totalRegistos = 0;
 
         public Visualizar_Clientes()
         {
@@ -36,10 +32,13 @@ namespace PawPlace.Forms.Clientes
                 string Valor = texto.ToLower();
                 string ID = texto.ToUpper();
                 DataTable DataTable = new DataTable();
-                string instrucao = "Select ID_Client, Name, Data_Nascimento, NIF, C_Cod_Postal";
-                string instrucaoFrom = " From Cliente";
-                string instrucaoOrder = " Order By ID_Client Asc";
-                instrucao = instrucao + instrucaoFrom + instrucaoOrder;
+
+                string instrucaoSelect = "SELECT C.*, CP.Localidade";
+                string instrucaoFrom = " FROM Cod_Postal AS CP LEFT JOIN Cliente AS C ON CP.Cod_Postal = C.C_Cod_Postal";
+                string instrucaoOrder = " ORDER BY ID_Client ASC";
+
+                string instrucao = instrucaoSelect + instrucaoFrom + instrucaoOrder;
+
                 System.Diagnostics.Debug.WriteLine(instrucao);
                 DataAdapter = new SqlDataAdapter(instrucao, conection);
                 DataAdapter.Fill(DataTable);
@@ -77,7 +76,6 @@ namespace PawPlace.Forms.Clientes
             Atribuir_Nomes_Tabela_Dados();
             Btn_Fechar_Pesquisa.Show();
             Btn_Fechar_Pesquisa.BringToFront();
-            totalRegistos = Tabela_Dados.Rows.Count;
         }
 
         private void Txt_Pesquisar_TextChanged(object sender, EventArgs e)
@@ -116,30 +114,43 @@ namespace PawPlace.Forms.Clientes
 
         private void Btn_Delete_Click(object sender, EventArgs e)
         {
-            ////Este código elimina todas as informações do registo que tiver selecionado, permitindo a confirmação da eliminação
-            ////para permitir anular, caso o botão tenha sido premido por engano.
-            //try
-            //{
-            //    DialogResult dialogResult = MessageBox.Show("Deseja que o relacionamento seja efetivamente removido?", "Removido Relacionamento", MessageBoxButtons.YesNo);
-            //    if (dialogResult == DialogResult.Yes)
-            //    {
-            //        string idClientesAlterar = Tabela_Dados.CurrentRow.Cells[0].Value.ToString();
-            //        conection.Open();
-            //        MySqlCommand command = new MySqlCommand("Update Clientes Set Estado = 'Indisponivel' Where ID_Cliente = '" + idClientesAlterar + "'", conection);
-            //        command.ExecuteNonQuery();
-            //        MessageBox.Show("O Cliente foi removido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        conection.Close();
-            //        ReporTabelaDados(Txt_Pesquisar.Text, Qnt_Entrys.Text);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("O Cliente não foi removido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
-            //catch (Exception Erro)
-            //{
-            //    MessageBox.Show(Erro.ToString());
-            //}
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Deseja que o cliente seja efetivamente eliminado?", "Eliminar Cliente", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SqlConnection con = new SqlConnection(conection))
+                    {
+                        string idClienteEliminar = Tabela_Dados.CurrentRow.Cells[0].Value.ToString();
+                        con.Open();
+
+                        DataTable DataTable = new DataTable();
+
+                        string instrucaoDelete = "DELETE ";
+                        string instrucaoFrom = "FROM Cliente ";
+                        string instrucaoWhere = $"WHERE ID_Client = '{idClienteEliminar}'";
+
+                        string instrucao = instrucaoDelete + instrucaoFrom + instrucaoWhere;
+
+                        SqlCommand CmdSql = new SqlCommand(instrucao, con);
+
+                        CmdSql.ExecuteNonQuery();
+                        MessageBox.Show("O Cliente foi eliminado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        con.Close();
+
+                        ReporTabelaDados(Txt_Pesquisar.Text);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("O Cliente não foi eliminado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.ToString());
+            }
         }
 
         private void Btn_Fechar_Click(object sender, EventArgs e)
