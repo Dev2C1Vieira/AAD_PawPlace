@@ -54,10 +54,10 @@
             // Pnl_Principal
             // 
             this.Pnl_Principal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Pnl_Principal.Controls.Add(this.Btn_Fechar_Pesquisa);
             this.Pnl_Principal.Controls.Add(this.Btn_Alterar);
             this.Pnl_Principal.Controls.Add(this.Btn_Delete);
             this.Pnl_Principal.Controls.Add(this.Txt_Pesquisar);
-            this.Pnl_Principal.Controls.Add(this.Btn_Fechar_Pesquisa);
             this.Pnl_Principal.Controls.Add(this.Lb_Procurar);
             this.Pnl_Principal.Controls.Add(this.Pnl_Linha_Tabela);
             this.Pnl_Principal.Controls.Add(this.Tabela_Dados);
@@ -119,7 +119,7 @@
             this.Btn_Fechar_Pesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Fechar_Pesquisa.BackColor = System.Drawing.Color.White;
             this.Btn_Fechar_Pesquisa.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Fechar_Pesquisa.Image")));
-            this.Btn_Fechar_Pesquisa.Location = new System.Drawing.Point(4138, 417);
+            this.Btn_Fechar_Pesquisa.Location = new System.Drawing.Point(2676, 492);
             this.Btn_Fechar_Pesquisa.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Btn_Fechar_Pesquisa.Name = "Btn_Fechar_Pesquisa";
             this.Btn_Fechar_Pesquisa.Size = new System.Drawing.Size(56, 48);

@@ -29,7 +29,6 @@ namespace PawPlace.Forms.Animais
             try
             {
                 string valor = texto.ToLower();
-                string id = texto.ToUpper();
                 DataTable DataTable = new DataTable();
 
                 string instrucaoSelect = "SELECT A.ID_Animal, A.Nome_Animal, A.Data_Nascimento, A.Género, " +
@@ -39,7 +38,8 @@ namespace PawPlace.Forms.Animais
                     "Q.Descricao";
                 string instrucaoFrom = " FROM Cliente AS C " +
                     "JOIN Animal AS A ON C.ID_Client = A.A_ID_Client " +
-                    "JOIN Quarto AS Q ON A.A_ID_Quarto = Q.ID_Quarto " +
+                    "JOIN Plano_Estadia AS PE ON A.ID_Animal = PE.PL_ID_Animal " +
+                    "JOIN Quarto AS Q ON PE.PL_ID_Quarto = Q.ID_Quarto " +
                     "LEFT JOIN Raca AS R ON A.A_ID_Raca = R.ID_Raca " +
                     "LEFT JOIN Cor_Animal AS CA ON A.ID_Animal = CA.C_ID_Animal " +
                     "LEFT JOIN Cor AS Co ON CA.C_ID_Cor = Co.ID_Cor";
@@ -47,12 +47,10 @@ namespace PawPlace.Forms.Animais
                 string instrucaoWhere = "";
                 if (texto != "")
                 {
-                    instrucaoWhere = string.Format($" WHERE LOWER(Nome_Animal) LIKE '%{valor}%' " +
-                        $"OR LOWER(C.Name) LIKE '%{valor}%' " +
-                        $"OR LOWER(Q.Descricao LIKE '%{valor}%')");
+                    instrucaoWhere = string.Format($" WHERE LOWER(Nome_Animal) LIKE '%{valor}%'");
                 }
 
-                string instrucaoOrder = " ORDER BY ID_Client ASC";
+                string instrucaoOrder = " ORDER BY A.ID_Animal ASC";
 
                 string instrucao = instrucaoSelect + instrucaoFrom + instrucaoWhere + instrucaoOrder;
 
@@ -105,6 +103,7 @@ namespace PawPlace.Forms.Animais
             try
             {
                 ReporTabelaDados(Txt_Pesquisar.Text);
+                Btn_Fechar_Pesquisa.Visible = true;
             }
             catch (Exception Erro)
             {
@@ -118,12 +117,12 @@ namespace PawPlace.Forms.Animais
             //nas respetivas caixas de texto, no formulário de alterar os dados.
             try
             {
-                int ID_ClienteAlterar = (int)Tabela_Dados.CurrentRow.Cells[0].Value;
-                Alterar_Cliente alterar_cliente = new Alterar_Cliente();
-                alterar_cliente.id = ID_ClienteAlterar;
-                if (alterar_cliente.ShowDialog() == DialogResult.OK)
+                int ID_AnimalAlterar = (int)Tabela_Dados.CurrentRow.Cells[0].Value;
+                Alterar_Animais alterar_animais = new Alterar_Animais();
+                alterar_animais.id = ID_AnimalAlterar;
+                if (alterar_animais.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("Dados do Cliente Alterados!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados do Animal Alterados!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ReporTabelaDados(Txt_Pesquisar.Text);
                 }
             }
