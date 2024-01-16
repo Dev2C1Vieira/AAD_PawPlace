@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Net.NetworkInformation;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace PawPlace.Forms.Clientes
 {
@@ -29,15 +27,22 @@ namespace PawPlace.Forms.Clientes
             //Este código permite-me utilizar o conceito Low Code, pois uma vez que o código se repete diversas vezes, dei a criação de um metodo, com variaveis qe fazem o trabalho por si.
             try
             {
-                string Valor = texto.ToLower();
-                string ID = texto.ToUpper();
+                string valor = texto.ToLower();
+                string id = texto.ToUpper();
                 DataTable DataTable = new DataTable();
 
                 string instrucaoSelect = "SELECT C.*, CP.Localidade";
                 string instrucaoFrom = " FROM Cod_Postal AS CP LEFT JOIN Cliente AS C ON CP.Cod_Postal = C.C_Cod_Postal";
+
+                string instrucaoWhere = "";
+                if (texto != "")
+                {
+                    instrucaoWhere = string.Format(" WHERE " + /*ID_Client LIKE '%{Convert.ToInt32(id)}%' OR*/ $"Lower(Name) LIKE '%{valor}%'");
+                }
+
                 string instrucaoOrder = " ORDER BY ID_Client ASC";
 
-                string instrucao = instrucaoSelect + instrucaoFrom + instrucaoOrder;
+                string instrucao = instrucaoSelect + instrucaoFrom + instrucaoWhere + instrucaoOrder;
 
                 System.Diagnostics.Debug.WriteLine(instrucao);
                 DataAdapter = new SqlDataAdapter(instrucao, conection);
@@ -151,11 +156,6 @@ namespace PawPlace.Forms.Clientes
             {
                 MessageBox.Show(Erro.ToString());
             }
-        }
-
-        private void Btn_Fechar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         #endregion

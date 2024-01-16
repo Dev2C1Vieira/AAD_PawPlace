@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace PawPlace.Forms.Animais
 {
-    public partial class Adicionar_Animais : Form
+    public partial class Alterar_Animais : Form
     {
-        public Adicionar_Animais()
+        public Alterar_Animais()
         {
             InitializeComponent();
         }
-
-        
     }
 }
