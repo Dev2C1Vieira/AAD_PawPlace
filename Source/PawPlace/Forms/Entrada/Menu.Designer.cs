@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.Pnl_Esquerda = new System.Windows.Forms.Panel();
-            this.Pnl_Sub_Quartos = new System.Windows.Forms.Panel();
-            this.Btn_Add_Quartos = new System.Windows.Forms.Button();
-            this.Btn_Ver_Quartos = new System.Windows.Forms.Button();
-            this.Btn_Quartos = new System.Windows.Forms.Button();
             this.Pnl_Sub_Animais = new System.Windows.Forms.Panel();
             this.Btn_Add_Animais = new System.Windows.Forms.Button();
             this.Btn_Ver_Animais = new System.Windows.Forms.Button();
@@ -60,7 +56,6 @@
             this.Pnl_Child_Form = new System.Windows.Forms.Panel();
             this.Relogio = new System.Windows.Forms.Timer(this.components);
             this.Pnl_Esquerda.SuspendLayout();
-            this.Pnl_Sub_Quartos.SuspendLayout();
             this.Pnl_Sub_Animais.SuspendLayout();
             this.Pnl_Sub_Clientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pict_Box_Logo)).BeginInit();
@@ -77,8 +72,6 @@
             // Pnl_Esquerda
             // 
             this.Pnl_Esquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
-            this.Pnl_Esquerda.Controls.Add(this.Pnl_Sub_Quartos);
-            this.Pnl_Esquerda.Controls.Add(this.Btn_Quartos);
             this.Pnl_Esquerda.Controls.Add(this.Pnl_Sub_Animais);
             this.Pnl_Esquerda.Controls.Add(this.Btn_Animais);
             this.Pnl_Esquerda.Controls.Add(this.Pnl_Sub_Clientes);
@@ -91,80 +84,6 @@
             this.Pnl_Esquerda.Name = "Pnl_Esquerda";
             this.Pnl_Esquerda.Size = new System.Drawing.Size(657, 2000);
             this.Pnl_Esquerda.TabIndex = 10;
-            // 
-            // Pnl_Sub_Quartos
-            // 
-            this.Pnl_Sub_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.Pnl_Sub_Quartos.Controls.Add(this.Btn_Add_Quartos);
-            this.Pnl_Sub_Quartos.Controls.Add(this.Btn_Ver_Quartos);
-            this.Pnl_Sub_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Pnl_Sub_Quartos.Location = new System.Drawing.Point(0, 1479);
-            this.Pnl_Sub_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Pnl_Sub_Quartos.Name = "Pnl_Sub_Quartos";
-            this.Pnl_Sub_Quartos.Size = new System.Drawing.Size(657, 238);
-            this.Pnl_Sub_Quartos.TabIndex = 11;
-            // 
-            // Btn_Add_Quartos
-            // 
-            this.Btn_Add_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.Btn_Add_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Add_Quartos.FlatAppearance.BorderSize = 0;
-            this.Btn_Add_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Add_Quartos.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Add_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_Add_Quartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Add_Quartos.Location = new System.Drawing.Point(0, 119);
-            this.Btn_Add_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Btn_Add_Quartos.Name = "Btn_Add_Quartos";
-            this.Btn_Add_Quartos.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
-            this.Btn_Add_Quartos.Size = new System.Drawing.Size(657, 119);
-            this.Btn_Add_Quartos.TabIndex = 5;
-            this.Btn_Add_Quartos.Text = "Adicionar Quartos";
-            this.Btn_Add_Quartos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Add_Quartos.UseVisualStyleBackColor = false;
-            this.Btn_Add_Quartos.Click += new System.EventHandler(this.Btn_Add_Quartos_Click);
-            // 
-            // Btn_Ver_Quartos
-            // 
-            this.Btn_Ver_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.Btn_Ver_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Ver_Quartos.FlatAppearance.BorderSize = 0;
-            this.Btn_Ver_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ver_Quartos.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ver_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_Ver_Quartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Ver_Quartos.Location = new System.Drawing.Point(0, 0);
-            this.Btn_Ver_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Btn_Ver_Quartos.Name = "Btn_Ver_Quartos";
-            this.Btn_Ver_Quartos.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
-            this.Btn_Ver_Quartos.Size = new System.Drawing.Size(657, 119);
-            this.Btn_Ver_Quartos.TabIndex = 4;
-            this.Btn_Ver_Quartos.Text = "Visualizar Quartos";
-            this.Btn_Ver_Quartos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Ver_Quartos.UseVisualStyleBackColor = false;
-            this.Btn_Ver_Quartos.Click += new System.EventHandler(this.Btn_Ver_Quartos_Click);
-            // 
-            // Btn_Quartos
-            // 
-            this.Btn_Quartos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
-            this.Btn_Quartos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Quartos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Quartos.FlatAppearance.BorderSize = 0;
-            this.Btn_Quartos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Quartos.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Quartos.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_Quartos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Quartos.Location = new System.Drawing.Point(0, 1312);
-            this.Btn_Quartos.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Btn_Quartos.Name = "Btn_Quartos";
-            this.Btn_Quartos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.Btn_Quartos.Size = new System.Drawing.Size(657, 167);
-            this.Btn_Quartos.TabIndex = 10;
-            this.Btn_Quartos.Text = "Quartos";
-            this.Btn_Quartos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Quartos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_Quartos.UseVisualStyleBackColor = false;
-            this.Btn_Quartos.Click += new System.EventHandler(this.Btn_Quartos_Click);
             // 
             // Pnl_Sub_Animais
             // 
@@ -534,7 +453,6 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.SizeChanged += new System.EventHandler(this.Menu_SizeChanged);
             this.Pnl_Esquerda.ResumeLayout(false);
-            this.Pnl_Sub_Quartos.ResumeLayout(false);
             this.Pnl_Sub_Animais.ResumeLayout(false);
             this.Pnl_Sub_Clientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pict_Box_Logo)).EndInit();
@@ -575,10 +493,6 @@
         private System.Windows.Forms.Panel PnlNav;
         private System.Windows.Forms.Button Btn_Home;
         private System.Windows.Forms.Button Btn_Animais;
-        private System.Windows.Forms.Panel Pnl_Sub_Quartos;
-        private System.Windows.Forms.Button Btn_Add_Quartos;
-        private System.Windows.Forms.Button Btn_Ver_Quartos;
-        private System.Windows.Forms.Button Btn_Quartos;
         private System.Windows.Forms.Panel Pnl_Sub_Animais;
         private System.Windows.Forms.Button Btn_Add_Animais;
         private System.Windows.Forms.Button Btn_Ver_Animais;

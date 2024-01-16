@@ -67,7 +67,6 @@ namespace PawPlace.Forms.Entrada
         {
             Pnl_Sub_Clientes.Visible = false;
             Pnl_Sub_Animais.Visible = false;
-            Pnl_Sub_Quartos.Visible = false;
         }
 
         private void HideSubMenu()
@@ -80,10 +79,6 @@ namespace PawPlace.Forms.Entrada
             if (Pnl_Sub_Animais.Visible == true)
             {
                 Pnl_Sub_Animais.Visible = false;
-            }
-            if (Pnl_Sub_Quartos.Visible == true)
-            {
-                Pnl_Sub_Quartos.Visible = false;
             }
         }
 
@@ -286,7 +281,6 @@ namespace PawPlace.Forms.Entrada
             Btn_Home.BackColor = Color.FromArgb(35, 48, 60);
             Btn_Clientes.BackColor = Color.FromArgb(24, 30, 40);
             Btn_Animais.BackColor = Color.FromArgb(35, 48, 60);
-            Btn_Quartos.BackColor = Color.FromArgb(35, 48, 60);
         }
 
         private void Btn_Ver_Clientes_Click(object sender, EventArgs e)
@@ -300,10 +294,6 @@ namespace PawPlace.Forms.Entrada
             Btn_Ver_Animais.ForeColor = Color.WhiteSmoke;
             Btn_Add_Animais.BackColor = Color.FromArgb(24, 30, 40);
             Btn_Add_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Quartos.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Quartos.ForeColor = Color.WhiteSmoke;
 
             //Este código abre o subformulário, no caso o Visualizar Clientes, no panel Parent.
             openChildForm(new Clientes.Visualizar_Clientes());
@@ -320,10 +310,6 @@ namespace PawPlace.Forms.Entrada
             Btn_Ver_Animais.ForeColor = Color.WhiteSmoke;
             Btn_Add_Animais.BackColor = Color.FromArgb(24, 30, 40);
             Btn_Add_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Quartos.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Quartos.ForeColor = Color.WhiteSmoke;
 
             //Este código abre o subformulário, no caso o Visualizar Clientes, no panel Parent.
             openChildForm(new Clientes.Adicionar_Cliente());
@@ -343,7 +329,6 @@ namespace PawPlace.Forms.Entrada
             Btn_Home.BackColor = Color.FromArgb(35, 48, 60);
             Btn_Clientes.BackColor = Color.FromArgb(35, 48, 60);
             Btn_Animais.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Quartos.BackColor = Color.FromArgb(35, 48, 60);
         }
 
         private void Btn_Ver_Animais_Click(object sender, EventArgs e)
@@ -357,10 +342,6 @@ namespace PawPlace.Forms.Entrada
             Btn_Ver_Animais.ForeColor = Color.FromArgb(0, 126, 249);
             Btn_Add_Animais.BackColor = Color.FromArgb(24, 30, 40);
             Btn_Add_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Quartos.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Quartos.ForeColor = Color.WhiteSmoke;
 
             //Este código abre o subformulário, no caso o Visualizar Clientes, no panel Parent.
             openChildForm(new Animais.Visualizar_Animais());
@@ -377,70 +358,9 @@ namespace PawPlace.Forms.Entrada
             Btn_Ver_Animais.ForeColor = Color.WhiteSmoke;
             Btn_Add_Animais.BackColor = Color.FromArgb(24, 30, 40);
             Btn_Add_Animais.ForeColor = Color.FromArgb(0, 126, 249);
-            Btn_Ver_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Quartos.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Quartos.ForeColor = Color.WhiteSmoke;
 
             //Este código abre o subformulário, no caso o Visualizar Clientes, no panel Parent.
             openChildForm(new Animais.Adicionar_Animais());
-        }
-
-        #endregion
-
-        #region QuartosSectionMethods
-
-        private void Btn_Quartos_Click(object sender, EventArgs e)
-        {
-            //Este código permite, no caso de fechado, abrir o subpanel dos clientes, para podermos aceder aos formulários de Adicionar e Visualizar.
-            PnlNav.BringToFront();
-            ShowSubMenu(Pnl_Sub_Quartos);
-            PnlNav.Height = Btn_Quartos.Height;
-            PnlNav.Top = Btn_Quartos.Top;
-            Btn_Home.BackColor = Color.FromArgb(35, 48, 60);
-            Btn_Clientes.BackColor = Color.FromArgb(35, 48, 60);
-            Btn_Animais.BackColor = Color.FromArgb(35, 48, 60);
-            Btn_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-        }
-
-        private void Btn_Ver_Quartos_Click(object sender, EventArgs e)
-        {
-            //Código relativo ao botão Visualizar Clientes.
-            Btn_Ver_Clientes.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Clientes.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Clientes.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Clientes.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Animais.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Animais.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Quartos.ForeColor = Color.FromArgb(0, 126, 249);
-            Btn_Add_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Quartos.ForeColor = Color.WhiteSmoke;
-
-            //Este código abre o subformulário, no caso o Visualizar Clientes, no panel Parent.
-            openChildForm(new Quartos.Visualizar_Quartos());
-        }
-
-        private void Btn_Add_Quartos_Click(object sender, EventArgs e)
-        {
-            //Código relativo ao botão Visualizar Clientes.
-            Btn_Ver_Clientes.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Clientes.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Clientes.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Clientes.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Animais.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Animais.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Animais.ForeColor = Color.WhiteSmoke;
-            Btn_Ver_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Ver_Quartos.ForeColor = Color.WhiteSmoke;
-            Btn_Add_Quartos.BackColor = Color.FromArgb(24, 30, 40);
-            Btn_Add_Quartos.ForeColor = Color.FromArgb(0, 126, 249);
-
-            //Este código abre o subformulário, no caso o Visualizar Clientes, no panel Parent.
-            openChildForm(new Quartos.Adicionar_Quartos());
         }
 
         #endregion

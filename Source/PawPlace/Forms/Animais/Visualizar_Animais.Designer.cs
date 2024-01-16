@@ -35,25 +35,34 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pnl_Principal = new System.Windows.Forms.Panel();
+            this.Btn_Fechar_SP = new System.Windows.Forms.PictureBox();
+            this.Btn_Ajuda = new System.Windows.Forms.Button();
+            this.Cmb_Proprietario = new System.Windows.Forms.ComboBox();
+            this.Btn_SP = new System.Windows.Forms.Button();
+            this.Btn_Fechar_Pesquisa = new System.Windows.Forms.PictureBox();
             this.Btn_Alterar = new System.Windows.Forms.PictureBox();
             this.Btn_Delete = new System.Windows.Forms.PictureBox();
             this.Txt_Pesquisar = new System.Windows.Forms.TextBox();
-            this.Btn_Fechar_Pesquisa = new System.Windows.Forms.PictureBox();
             this.Lb_Procurar = new System.Windows.Forms.Label();
             this.Pnl_Linha_Tabela = new System.Windows.Forms.Panel();
             this.Tabela_Dados = new System.Windows.Forms.DataGridView();
             this.Pnl_Linha = new System.Windows.Forms.Panel();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.Pnl_Principal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar_SP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar_Pesquisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Alterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar_Pesquisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tabela_Dados)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Principal
             // 
             this.Pnl_Principal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Pnl_Principal.Controls.Add(this.Btn_Fechar_SP);
+            this.Pnl_Principal.Controls.Add(this.Btn_Ajuda);
+            this.Pnl_Principal.Controls.Add(this.Cmb_Proprietario);
+            this.Pnl_Principal.Controls.Add(this.Btn_SP);
             this.Pnl_Principal.Controls.Add(this.Btn_Fechar_Pesquisa);
             this.Pnl_Principal.Controls.Add(this.Btn_Alterar);
             this.Pnl_Principal.Controls.Add(this.Btn_Delete);
@@ -69,6 +78,72 @@
             this.Pnl_Principal.Size = new System.Drawing.Size(3000, 1767);
             this.Pnl_Principal.TabIndex = 1;
             this.Pnl_Principal.Click += new System.EventHandler(this.Pnl_Principal_Click);
+            // 
+            // Btn_Fechar_SP
+            // 
+            this.Btn_Fechar_SP.BackColor = System.Drawing.Color.White;
+            this.Btn_Fechar_SP.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Fechar_SP.Image")));
+            this.Btn_Fechar_SP.Location = new System.Drawing.Point(748, 490);
+            this.Btn_Fechar_SP.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Fechar_SP.Name = "Btn_Fechar_SP";
+            this.Btn_Fechar_SP.Size = new System.Drawing.Size(56, 48);
+            this.Btn_Fechar_SP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Fechar_SP.TabIndex = 131;
+            this.Btn_Fechar_SP.TabStop = false;
+            this.Btn_Fechar_SP.Click += new System.EventHandler(this.Btn_Fechar_SP_Click);
+            // 
+            // Btn_Ajuda
+            // 
+            this.Btn_Ajuda.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Ajuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Ajuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Ajuda.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Ajuda.Location = new System.Drawing.Point(1193, 472);
+            this.Btn_Ajuda.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Ajuda.Name = "Btn_Ajuda";
+            this.Btn_Ajuda.Size = new System.Drawing.Size(148, 83);
+            this.Btn_Ajuda.TabIndex = 130;
+            this.Btn_Ajuda.Text = "Ajuda";
+            this.Btn_Ajuda.UseVisualStyleBackColor = false;
+            this.Btn_Ajuda.Click += new System.EventHandler(this.Btn_Ajuda_Click);
+            // 
+            // Cmb_Proprietario
+            // 
+            this.Cmb_Proprietario.FormattingEnabled = true;
+            this.Cmb_Proprietario.Location = new System.Drawing.Point(224, 492);
+            this.Cmb_Proprietario.Name = "Cmb_Proprietario";
+            this.Cmb_Proprietario.Size = new System.Drawing.Size(498, 39);
+            this.Cmb_Proprietario.TabIndex = 129;
+            // 
+            // Btn_SP
+            // 
+            this.Btn_SP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(60)))));
+            this.Btn_SP.FlatAppearance.BorderSize = 0;
+            this.Btn_SP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SP.ForeColor = System.Drawing.Color.White;
+            this.Btn_SP.Location = new System.Drawing.Point(831, 471);
+            this.Btn_SP.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_SP.Name = "Btn_SP";
+            this.Btn_SP.Size = new System.Drawing.Size(346, 83);
+            this.Btn_SP.TabIndex = 128;
+            this.Btn_SP.Text = "Stored Procedure";
+            this.Btn_SP.UseVisualStyleBackColor = false;
+            this.Btn_SP.Click += new System.EventHandler(this.Btn_SP_Click);
+            // 
+            // Btn_Fechar_Pesquisa
+            // 
+            this.Btn_Fechar_Pesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Fechar_Pesquisa.BackColor = System.Drawing.Color.White;
+            this.Btn_Fechar_Pesquisa.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Fechar_Pesquisa.Image")));
+            this.Btn_Fechar_Pesquisa.Location = new System.Drawing.Point(2676, 492);
+            this.Btn_Fechar_Pesquisa.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Btn_Fechar_Pesquisa.Name = "Btn_Fechar_Pesquisa";
+            this.Btn_Fechar_Pesquisa.Size = new System.Drawing.Size(56, 48);
+            this.Btn_Fechar_Pesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Fechar_Pesquisa.TabIndex = 59;
+            this.Btn_Fechar_Pesquisa.TabStop = false;
+            this.Btn_Fechar_Pesquisa.Click += new System.EventHandler(this.Btn_Fechar_Pesquisa_Click);
             // 
             // Btn_Alterar
             // 
@@ -113,20 +188,6 @@
             this.Txt_Pesquisar.TabIndex = 55;
             this.Txt_Pesquisar.TextChanged += new System.EventHandler(this.Txt_Pesquisar_TextChanged);
             this.Txt_Pesquisar.Leave += new System.EventHandler(this.Txt_Pesquisar_Leave);
-            // 
-            // Btn_Fechar_Pesquisa
-            // 
-            this.Btn_Fechar_Pesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Fechar_Pesquisa.BackColor = System.Drawing.Color.White;
-            this.Btn_Fechar_Pesquisa.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Fechar_Pesquisa.Image")));
-            this.Btn_Fechar_Pesquisa.Location = new System.Drawing.Point(2676, 492);
-            this.Btn_Fechar_Pesquisa.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Btn_Fechar_Pesquisa.Name = "Btn_Fechar_Pesquisa";
-            this.Btn_Fechar_Pesquisa.Size = new System.Drawing.Size(56, 48);
-            this.Btn_Fechar_Pesquisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Fechar_Pesquisa.TabIndex = 59;
-            this.Btn_Fechar_Pesquisa.TabStop = false;
-            this.Btn_Fechar_Pesquisa.Click += new System.EventHandler(this.Btn_Fechar_Pesquisa_Click);
             // 
             // Lb_Procurar
             // 
@@ -247,9 +308,10 @@
             this.Load += new System.EventHandler(this.Visualizar_Animais_Load);
             this.Pnl_Principal.ResumeLayout(false);
             this.Pnl_Principal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar_SP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar_Pesquisa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Alterar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Delete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Btn_Fechar_Pesquisa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tabela_Dados)).EndInit();
             this.ResumeLayout(false);
 
@@ -267,5 +329,9 @@
         public System.Windows.Forms.DataGridView Tabela_Dados;
         private System.Windows.Forms.Panel Pnl_Linha;
         private System.Windows.Forms.Label Lbl_Titulo;
+        private System.Windows.Forms.Button Btn_SP;
+        private System.Windows.Forms.Button Btn_Ajuda;
+        private System.Windows.Forms.ComboBox Cmb_Proprietario;
+        private System.Windows.Forms.PictureBox Btn_Fechar_SP;
     }
 }

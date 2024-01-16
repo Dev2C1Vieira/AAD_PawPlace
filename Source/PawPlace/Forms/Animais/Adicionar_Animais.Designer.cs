@@ -41,7 +41,6 @@
             this.Lb_DataNascimento = new System.Windows.Forms.Label();
             this.Lb_NomeAnimal = new System.Windows.Forms.Label();
             this.Txt_NomeAnimal = new System.Windows.Forms.TextBox();
-            this.Txt_DataNascimento = new System.Windows.Forms.TextBox();
             this.Btn_Limpar = new System.Windows.Forms.PictureBox();
             this.Btn_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Limpar)).BeginInit();
@@ -116,7 +115,6 @@
             this.DTP_DataNascimento.Name = "DTP_DataNascimento";
             this.DTP_DataNascimento.Size = new System.Drawing.Size(857, 38);
             this.DTP_DataNascimento.TabIndex = 119;
-            this.DTP_DataNascimento.Visible = false;
             // 
             // Lb_Genero
             // 
@@ -183,24 +181,9 @@
             this.Txt_NomeAnimal.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Txt_NomeAnimal.Multiline = true;
             this.Txt_NomeAnimal.Name = "Txt_NomeAnimal";
-            this.Txt_NomeAnimal.ReadOnly = true;
             this.Txt_NomeAnimal.Size = new System.Drawing.Size(857, 47);
             this.Txt_NomeAnimal.TabIndex = 113;
             this.Txt_NomeAnimal.UseWaitCursor = true;
-            // 
-            // Txt_DataNascimento
-            // 
-            this.Txt_DataNascimento.BackColor = System.Drawing.Color.White;
-            this.Txt_DataNascimento.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_DataNascimento.ForeColor = System.Drawing.Color.Black;
-            this.Txt_DataNascimento.Location = new System.Drawing.Point(710, 342);
-            this.Txt_DataNascimento.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.Txt_DataNascimento.Multiline = true;
-            this.Txt_DataNascimento.Name = "Txt_DataNascimento";
-            this.Txt_DataNascimento.ReadOnly = true;
-            this.Txt_DataNascimento.Size = new System.Drawing.Size(857, 47);
-            this.Txt_DataNascimento.TabIndex = 120;
-            this.Txt_DataNascimento.UseWaitCursor = true;
             // 
             // Btn_Limpar
             // 
@@ -228,6 +211,7 @@
             this.Btn_Add.TabIndex = 127;
             this.Btn_Add.Text = "Adicionar";
             this.Btn_Add.UseVisualStyleBackColor = false;
+            this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
             // Adicionar_Animais
             // 
@@ -247,7 +231,6 @@
             this.Controls.Add(this.Lb_DataNascimento);
             this.Controls.Add(this.Lb_NomeAnimal);
             this.Controls.Add(this.Txt_NomeAnimal);
-            this.Controls.Add(this.Txt_DataNascimento);
             this.Controls.Add(this.Pnl_Linha_Titulo);
             this.Controls.Add(this.Lb_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -276,7 +259,6 @@
         private System.Windows.Forms.Label Lb_DataNascimento;
         private System.Windows.Forms.Label Lb_NomeAnimal;
         public System.Windows.Forms.TextBox Txt_NomeAnimal;
-        public System.Windows.Forms.TextBox Txt_DataNascimento;
         private System.Windows.Forms.PictureBox Btn_Limpar;
         private System.Windows.Forms.Button Btn_Add;
     }

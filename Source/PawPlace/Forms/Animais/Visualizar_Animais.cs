@@ -3,7 +3,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using PawPlace.Forms.Clientes;
+
 
 namespace PawPlace.Forms.Animais
 {
@@ -33,16 +33,10 @@ namespace PawPlace.Forms.Animais
 
                 string instrucaoSelect = "SELECT A.ID_Animal, A.Nome_Animal, A.Data_Nascimento, A.Género, " +
                     "R.Designacao, " +
-                    "Co.Designacao, " +
-                    "C.Name, " +
-                    "Q.Descricao";
+                    "C.Name";
                 string instrucaoFrom = " FROM Cliente AS C " +
                     "JOIN Animal AS A ON C.ID_Client = A.A_ID_Client " +
-                    "JOIN Plano_Estadia AS PE ON A.ID_Animal = PE.PL_ID_Animal " +
-                    "JOIN Quarto AS Q ON PE.PL_ID_Quarto = Q.ID_Quarto " +
-                    "LEFT JOIN Raca AS R ON A.A_ID_Raca = R.ID_Raca " +
-                    "LEFT JOIN Cor_Animal AS CA ON A.ID_Animal = CA.C_ID_Animal " +
-                    "LEFT JOIN Cor AS Co ON CA.C_ID_Cor = Co.ID_Cor";
+                    "LEFT JOIN Raca AS R ON A.A_ID_Raca = R.ID_Raca";
 
                 string instrucaoWhere = "";
                 if (texto != "")
@@ -74,9 +68,7 @@ namespace PawPlace.Forms.Animais
                 Tabela_Dados.Columns[2].HeaderText = "Data de Nascimento";
                 Tabela_Dados.Columns[3].HeaderText = "Género";
                 Tabela_Dados.Columns[4].HeaderText = "Raca";
-                Tabela_Dados.Columns[5].HeaderText = "Cor";
-                Tabela_Dados.Columns[6].HeaderText = "Proprietário";
-                Tabela_Dados.Columns[7].HeaderText = "Quarto";
+                Tabela_Dados.Columns[5].HeaderText = "Proprietário";
 
             }
             catch (Exception Erro)
@@ -89,8 +81,42 @@ namespace PawPlace.Forms.Animais
 
         #region ButtonsMethods
 
+        public void Preencher_Cmb_Proprietario()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conection))
+                {
+                    con.Open();
+
+                    DataTable otable = new DataTable();
+
+                    string instrucaoSelect = "SELECT * ";
+                    string instrucaoFrom = "FROM Cliente ";
+                    string instrucaoOrder = "ORDER BY ID_Client ASC";
+
+                    string instrucao = instrucaoSelect + instrucaoFrom + instrucaoOrder;
+
+                    SqlDataAdapter Cmd = new SqlDataAdapter(instrucao, conection);
+                    Cmd.Fill(otable);
+
+                    Cmb_Proprietario.DataSource = otable;
+                    Cmb_Proprietario.DisplayMember = "Name";
+                    Cmb_Proprietario.ValueMember = "ID_Client";
+
+                    con.Close();
+                }
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.ToString());
+            }
+        }
+
         private void Visualizar_Animais_Load(object sender, EventArgs e)
         {
+            Preencher_Cmb_Proprietario();
+            Cmb_Proprietario.Text = "";
             ReporTabelaDados(Txt_Pesquisar.Text);
             Atribuir_Nomes_Tabela_Dados();
             Btn_Fechar_Pesquisa.Show();
@@ -136,26 +162,26 @@ namespace PawPlace.Forms.Animais
         {
             try
             {
-                DialogResult dialogResult = MessageBox.Show("Deseja que o cliente seja efetivamente eliminado?", "Eliminar Cliente", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Deseja que o animal seja efetivamente eliminado?", "Eliminar Animal", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     using (SqlConnection con = new SqlConnection(conection))
                     {
-                        string idClienteEliminar = Tabela_Dados.CurrentRow.Cells[0].Value.ToString();
+                        string idAnimalEliminar = Tabela_Dados.CurrentRow.Cells[0].Value.ToString();
                         con.Open();
 
                         DataTable DataTable = new DataTable();
 
                         string instrucaoDelete = "DELETE ";
-                        string instrucaoFrom = "FROM Cliente ";
-                        string instrucaoWhere = $"WHERE ID_Client = '{idClienteEliminar}'";
+                        string instrucaoFrom = "FROM Animal ";
+                        string instrucaoWhere = $"WHERE ID_Animal = '{idAnimalEliminar}'";
 
                         string instrucao = instrucaoDelete + instrucaoFrom + instrucaoWhere;
 
                         SqlCommand CmdSql = new SqlCommand(instrucao, con);
 
                         CmdSql.ExecuteNonQuery();
-                        MessageBox.Show("O Cliente foi eliminado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("O Animal foi eliminado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         con.Close();
 
@@ -164,12 +190,54 @@ namespace PawPlace.Forms.Animais
                 }
                 else
                 {
-                    MessageBox.Show("O Cliente não foi eliminado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O Animal não foi eliminado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception Erro)
             {
                 MessageBox.Show(Erro.ToString());
+            }
+        }
+
+        private void Btn_SP_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja executar o Stored Procedure?", "Stored Procedure!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(conection))
+                    {
+                        using (SqlCommand command = new SqlCommand("GetAnimaisPorCliente", con))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            // Adiciona o parâmetro aqui
+                            command.Parameters.AddWithValue("@IDCliente", Cmb_Proprietario.SelectedValue);
+
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                            {
+                                DataTable table = new DataTable();
+                                adapter.Fill(table);
+                                Tabela_Dados.DataSource = table;
+                            }
+                        }
+                    }
+                }
+                catch (SqlException SqlE)
+                {
+                    // Tratamento de exceções específicas do SQL.
+                    Console.WriteLine("Erro de SQL: " + SqlE.Message);
+                }
+                catch (Exception E)
+                {
+                    // Tratamento de outras exceções.
+                    Console.WriteLine("Erro: " + E.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("O Stored Procedure, não foi executado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -213,5 +281,16 @@ namespace PawPlace.Forms.Animais
         }
 
         #endregion
+
+        private void Btn_Ajuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este Stored Procedure, realiza uma pesquisa á Base de Dados, \nprocurando todos os animais do proprietário, selecionado na comboBox à esquerda! ", "Stored Procedure!", MessageBoxButtons.OK);
+        }
+
+        private void Btn_Fechar_SP_Click(object sender, EventArgs e)
+        {
+            Cmb_Proprietario.Text = "";
+            ReporTabelaDados(Txt_Pesquisar.Text);
+        }
     }
 }
